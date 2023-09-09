@@ -1,0 +1,42 @@
+<br>kod
+  <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="75"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="30"/>
+    </Grid.RowDefinitions>
+    <Image Source="Resources/logo.png" HorizontalAlignment="Left"></Image>
+    <TextBlock Text="Header" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+    <Grid Background="DarkCyan" Panel.ZIndex="-2"></Grid>
+    <Grid Grid.Row="2" Background="DarkGray"></Grid>
+    <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>
+    <Button Content="Back" Name="BtnBack" Width="175" Height="30" Background="SkyBlue" HorizontalAlignment="Right" Click="BtnBack_Click"></Button>
+</Grid>
+
+<br>kod 2
+ public partial class MainWindow : Window
+ {
+     public MainWindow()
+     {
+         InitializeComponent();
+         MainFrame.Navigate(new HotelsPage());
+         Manager.MainFrame = MainFrame;
+     }
+
+     private void BtnBack_Click(object sender, RoutedEventArgs e)
+     {
+         Manager.MainFrame.GoBack();
+     }
+
+     private void MainFrame_ContentRendered(object sender, EventArgs e)
+     {
+         if (MainFrame.CanGoBack)
+         {
+             BtnBack.Visibility = Visibility.Visible;
+         }
+         else
+         {
+             BtnBack.Visibility = Visibility.Hidden;
+         }
+     }
+ }
