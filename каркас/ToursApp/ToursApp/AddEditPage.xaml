@@ -9,6 +9,13 @@
       Title="AddEditPage">
 
     <Grid>
-        <TextBlock Text="Hello!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="620" Margin="0,-54,0,-116">
+            <TextBlock Text="Authorization" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="302,5,318,405"></TextBlock>
+            <TextBlock Text="Логин"></TextBlock>
+            <TextBox Name="Login" Width="100"></TextBox>
+            <TextBlock Text="Password"></TextBlock>
+            <TextBox Name="Password" Width="100"></TextBox>
+            <Button Click="Enter" Background="DeepSkyBlue" Width="100">Войти</Button>
+        </StackPanel>
     </Grid>
 </Page>

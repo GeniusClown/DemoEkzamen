@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace ToursApp
 {
     /// <summary>
-    /// Логика взаимодействия для AddEditPage.xaml
+    /// Логика взаимодействия для Admin.xaml
     /// </summary>
-    public partial class AddEditPage : Page
+    public partial class Admin : Page
     {
-        public AddEditPage()
+        public Admin()
         {
             InitializeComponent();
-        }
-        private void Enter(object sender, RoutedEventArgs e)
-        {
-            if (Login.Text == "admin" && Password.Text == "admin1")
-                Manager.MainFrame.Navigate(new Admin());
-
-            if (Login.Text == "name" && Password.Text == "123")
-                Manager.MainFrame.Navigate(new User());
         }
     }
 }

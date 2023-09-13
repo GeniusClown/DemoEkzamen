@@ -37,3 +37,7 @@ C:\Users\labor\source\repos\ToursApp\ToursApp\bin\Debug\ToursApp.pdb
 C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\ToursApp.Properties.Resources.resources
 C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\ToursApp.csproj.CoreCompileInputs.cache
 C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\ToursApp.exe
+C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\Admin.g.cs
+C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\User.g.cs
+C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\Admin.baml
+C:\Users\labor\source\repos\ToursApp\ToursApp\obj\Debug\User.baml
