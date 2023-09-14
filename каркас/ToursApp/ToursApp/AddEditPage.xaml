@@ -9,12 +9,18 @@
       Title="AddEditPage">
 
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="620" Margin="0,-54,0,-116">
-            <TextBlock Text="Authorization" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="302,5,318,405"></TextBlock>
-            <TextBlock Text="Логин"></TextBlock>
-            <TextBox Name="Login" Width="100"></TextBox>
-            <TextBlock Text="Password"></TextBlock>
-            <TextBox Name="Password" Width="100"></TextBox>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Authorization" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30"></TextBlock>
+            <StackPanel>
+                <TextBlock Text="Login" HorizontalAlignment="Center"></TextBlock>
+                <TextBox Name="Login" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Password" HorizontalAlignment="Center"></TextBlock>
+                <TextBox Name="TxbPassword" Width="100" Visibility="Collapsed"></TextBox>
+                <PasswordBox Name="UrPassword" Width="100"></PasswordBox>
+                <TextBlock Text="Show Password" x:Name="TbxShowPass" MouseDown="TbxShowPass_MouseDown" MouseUp="TbxShowPass_MouseUp" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
             <Button Click="Enter" Background="DeepSkyBlue" Width="100">Войти</Button>
         </StackPanel>
     </Grid>

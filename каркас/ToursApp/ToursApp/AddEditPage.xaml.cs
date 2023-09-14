@@ -26,11 +26,24 @@ namespace ToursApp
         }
         private void Enter(object sender, RoutedEventArgs e)
         {
-            if (Login.Text == "admin" && Password.Text == "admin1")
+            if (Login.Text == "admin" && UrPassword.Name == "admin1")
                 Manager.MainFrame.Navigate(new Admin());
 
-            if (Login.Text == "name" && Password.Text == "123")
+            if (Login.Text == "name" && UrPassword.Name == "123")
                 Manager.MainFrame.Navigate(new User());
+        }
+
+        private void TbxShowPass_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            TxbPassword.Visibility = Visibility.Collapsed;
+            UrPassword.Visibility = Visibility.Visible;
+        }
+
+        private void TbxShowPass_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TxbPassword.Visibility = Visibility.Visible;
+            UrPassword.Visibility = Visibility.Collapsed;
+            TxbPassword.Text = UrPassword.Password;
         }
     }
 }
